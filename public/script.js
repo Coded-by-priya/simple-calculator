@@ -20,10 +20,8 @@ function calculate() {
     const result = eval(input);
     document.getElementById("display").value = result;
 
-    // Save expression before result replaces it
     const expression = input;
 
-    // Clear input for next calculation
     input = result.toString();
 
     // Send to backend
@@ -76,6 +74,7 @@ historyBtn.addEventListener("click", () => {
   if (isHistoryVisible) fetchLogs();
 });
 
+// Fetching Logs
 function fetchLogs() {
   fetch('/api/logs')
     .then(response => response.json())
@@ -117,7 +116,6 @@ function saveLog(entry) {
   let logs = JSON.parse(localStorage.getItem('calcLogs')) || [];
   logs.push(entry);
 
-  // Optional: keep it trimmed even in storage
   if (logs.length > 10) {
     logs = logs.slice(-10);
   }

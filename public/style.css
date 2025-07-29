@@ -98,6 +98,10 @@ button:hover {
   padding-bottom: 4px;
 }
 
+#historyBtn:hover{
+  transform: scale(0.85);
+}
+
 /* Function Buttons */
 .btn-func {
   background-color: #ff1744;
@@ -107,6 +111,7 @@ button:hover {
 
 .btn-func:hover {
   background-color: #ff4569;
+  transform: scale(0.85);
 }
 
 /* Operator Buttons */
@@ -118,9 +123,10 @@ button:hover {
 
 .btn-op:hover {
   background-color: #7c4dff;
+  transform: scale(1.08);
 }
 
-/* Equals Button */
+/* Equal Button */
 .btn-eq {
   grid-column: span 4;
   background-color: #00ff99;
@@ -135,8 +141,10 @@ button:hover {
 
 .btn-eq:hover {
   background-color: #69f0ae;
+  transform: scale(1.03);
 }
 
+/* Sliding history panel */
 .buttons-toggle-wrapper {
   display: flex;
   justify-content: center;
@@ -248,20 +256,9 @@ button:hover {
   cursor: pointer;
 }
 
-.purple-btn {
-  background-color: #7F5AF0;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 10px;
-  margin: 5px;
-  cursor: pointer;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-.purple-btn:hover {
-  transform: scale(1.05);
+#clearHistory:hover{
+  background-color: #ff4569;
+  transform: scale(0.85);
 }
 
 /* Responsive Mobile Styles */

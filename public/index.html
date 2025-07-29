@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="calculator">
+    <h2>Calculator</h2>
+
+    <input type="text" id="display" readonly placeholder="0" />
+
+    <div class="button-toggler-wrapper">
+      <div class="button-grid" id="buttonGrid">
+        <!-- Top Row -->
+        <button class="btn special-btn" id="historyBtn" onclick="fetchLogs()">📜</button>
+        <button class="btn-func" onclick="clearDisplay()">C</button>
+        <button class="btn-func" onclick="backspace()">⌫</button>
+        <button class="btn-op" onclick="press('%')">%</button>
+
+        <!-- Number & Operators -->
+        <button class="num-btn" onclick="press('7')">7</button>
+        <button class="num-btn" onclick="press('8')">8</button>
+        <button class="num-btn" onclick="press('9')">9</button>
+        <button class="btn-op" onclick="press('/')">÷</button>
+
+        <button class="num-btn" onclick="press('4')">4</button>
+        <button class="num-btn" onclick="press('5')">5</button>
+        <button class="num-btn" onclick="press('6')">6</button>
+        <button class="btn-op" onclick="press('*')">×</button>
+
+        <button class="num-btn" onclick="press('1')">1</button>
+        <button class="num-btn" onclick="press('2')">2</button>
+        <button class="num-btn" onclick="press('3')">3</button>
+        <button class="btn-op" onclick="press('-')">−</button>
+
+        <button class="num-btn" onclick="press('00')">00</button>
+        <button class="num-btn" onclick="press('0')">0</button>
+        <button class="num-btn" onclick="press('.')">.</button>
+        <button class="btn-op" onclick="press('+')">+</button>
+        <button class="btn-eq" onclick="calculate()">=</button>
+      </div>
+      
+      <!-- History Pannel -->
+      <div class="history-panel" id="historyPanel">
+        <button id="clearHistory" onclick="clearHistory()">✖</button>
+        <h3>Calculation History</h3>
+        <div id="history-list"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

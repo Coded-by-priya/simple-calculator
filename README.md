@@ -39,7 +39,7 @@ simple-calculator-logs/
 ├── routes/
 │   └── logRoutes.js
 ├── logs.txt
-├── app.js
+├── server.js
 └── README.md
 ```
 
